@@ -57,6 +57,15 @@ app.post("/login",async(req,res)=>{
 })
 app.get("/todos",async(req,res)=>{
     try{
+       
+
+    }
+    catch{
+        
+    }
+})
+app.post("/todos",async(req,res)=>{
+    try{
         const user=await todoModel.create(req.body)
         return res.status(200).send(user)
 
@@ -64,13 +73,6 @@ app.get("/todos",async(req,res)=>{
     catch{
         return res.status(500).send(arr.message)
 
-    }
-})
-app.post("/todos",async(req,res)=>{
-    try{
-
-    }
-    catch{
         
     }
 })
